@@ -1,3 +1,13 @@
+body {
+    background-image: url(background_forest.webp);
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+
+.bg-rgba {
+    background:rgba(0,0,0,0.4);
+}
+
 .start {
     display: flex;
     justify-content: center;
