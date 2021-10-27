@@ -12,8 +12,8 @@
         </title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">プロダクト名</a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">I'm Here Now</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,28 +48,32 @@
             </div>
         </nav>
           
+        
+        <div class="bg-rgba p-1">
         <div class="m-5">
-        <h1 class="text-center">プロダクト名</h1>
+        <h1 class="text-center">I'm Here Now</h1>
 
 
         <div class="form-group">
-          <label for="text1">あなたは今どのような不安を感じていますか</label>
-          <input type="text" id="text1" class="form-control">
+          <label for="anxiety">あなたは今どのようなことに不安を感じていますか（例：試験に合格できるか心配、締め切りに間に合うかわからないなど）</label>
+          <input type="text" id="anxiety" class="form-control" required>
         </div>
         <div class="form-group">
-          <label for="select1a">どの程度不安ですか</label>
-          <select id="select1a" class="form-control">
-            <option>とても不安</option>
-            <option>少し不安</option>
-            <option>ああ</option>
-            <option>ああ</option>
+          <label for="anxiety-degree">それはどの程度不安ですか</label>
+          <select id="anxiety-degree" class="form-control">
+            <option value="5">とても不安</option>
+            <option value="4">少し不安</option>
+            <option value="3">ああ</option>
+            <option value="2">ああ</option>
+            <option value="1">ああ</option>
           </select>
         </div>
 
         <div class="start">
-            <button class="btn btn-success" onclick="moveSight()">Start</button>
+            <button class="btn btn-success" onclick="homeToFive()">Start</button>
         </div>
 
+        </div>
         </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
