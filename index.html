@@ -6,6 +6,7 @@
         <meta name="description" content="・・・">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="style.css">
         <title>
           jphacks 2021
@@ -51,27 +52,24 @@
         
         <div class="bg-rgba p-1">
         <div class="m-5">
-        <h1 class="text-center">I'm Here Now</h1>
+          <h1 class="text-center">I'm Here Now</h1>
 
+          <div class="form-group">
+            <label for="anxiety">あなたは今どのようなことに不安を感じていますか（例：試験に合格できるか心配、締め切りに間に合うかわからないなど）</label>
+            <input type="text" id="anxiety" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="anxiety-degree">それはどの程度不安ですか</label>
+            <select id="anxiety-degree" class="form-control" required>
+              <option value="3">とても不安</option>
+              <option value="2">けっこう不安</option>
+              <option value="1">ちょっと不安</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label for="anxiety">あなたは今どのようなことに不安を感じていますか（例：試験に合格できるか心配、締め切りに間に合うかわからないなど）</label>
-          <input type="text" id="anxiety" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label for="anxiety-degree">それはどの程度不安ですか</label>
-          <select id="anxiety-degree" class="form-control">
-            <option value="5">とても不安</option>
-            <option value="4">少し不安</option>
-            <option value="3">ああ</option>
-            <option value="2">ああ</option>
-            <option value="1">ああ</option>
-          </select>
-        </div>
-
-        <div class="start">
-            <button class="btn btn-success" onclick="homeToFive()">Start</button>
-        </div>
+          <div class="start">
+              <button type="submit" class="btn btn-success" onclick="homeToFive()">Start</button>
+          </div>
 
         </div>
         </div>
