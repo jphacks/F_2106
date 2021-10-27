@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="・・・">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>title</title>
+        <title>5-SIGHT</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -47,37 +47,47 @@
         </nav>
 
         <div class="m-5">
-            <h1 class="text-center">5 - SIGHT</h1>
-            <p>周りを見渡して見えるものを5つ書き出してください(例：PC, 机, 窓, 壁など)</p>
+          <h1 class="text-center">5 - SIGHT</h1>
+          <p class="text-center">周りを見渡して見えるものを5つ書き出してください(例：PC, 机, 窓, 壁など)</p>
 
-            <div class="form-group">
-              <label for="text1">1つ目</label>
-              <input type="text" id="text1" class="form-control" style="width: min-content;">
+          <div class="container">
+            <div class="text-center">
+              <label for="sight-text1">
+                <p>1つ目</p>
+                <input type="text" id="sight-text1" class="form-control" style="width: min-content;" required="required">
+              </label>
             </div>
-            <div class="form-group">
-              <label for="text2">2つ目</label>
-              <input type="text" id="text2" class="form-control" style="width: min-content;">
+            <div class="text-center">
+              <label for="sight-text2">
+                <p>2つ目</p>
+                <input type="text" id="sight-text2" class="form-control" style="width: min-content;" required="required">
+              </label>
             </div>
-            <div class="form-group">
-              <label for="text3">3つ目</label>
-              <input type="text" id="text3" class="form-control" style="width: min-content;">
+            <div class="text-center">
+              <label for="sight-text3">
+                <p>3つ目</p>
+                <input type="text" id="sight-text3" class="form-control" style="width: min-content;" required="required">
+              </label>
             </div>
-            <div class="form-group">
-              <label for="text4">4つ目</label>
-              <input type="text" id="text4" class="form-control" style="width: min-content;">
+            <div class="text-center">
+              <label for="sight-text4">
+                <p>4つ目</p>
+                <input type="text" id="sight-text4" class="form-control" style="width: min-content;" required="required">
+              </label>
             </div>
-            <div class="form-group">
-              <label for="text5">5つ目</label>
-              <input type="text" id="text5" class="form-control" style="width: min-content;">
+            <div class="text-center">
+              <label for="sight-text5">
+                <p>5つ目</p>
+                <input type="text" id="sight-text5" class="form-control" style="width: min-content;" required="required">
+              </label>
             </div>
-            
-            <div class="main">
-                <button class="btn btn-success" onclick="moveHome()">Previous</button>
-                <button class="btn btn-success" onclick="moveFeel()">Next</button>
-            </div>
+          </div>
+          
+          <div class="main">
+            <button class="btn btn-success" onclick="moveHome()">Previous</button>
+            <button class="btn btn-success" onclick="moveFeel()">Next</button>
+          </div>
         </div>
-        
-
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
