@@ -19,3 +19,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+h1{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
