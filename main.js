@@ -70,3 +70,22 @@ function next(prefix, length, to) {
         move(to);
     }
 }
+
+function complete() {
+    move("complete");
+}
+
+
+document.getElementById("twitter-share-button").onclick = function() {
+    let anxiety = localStorage.getItem("anxiety");
+    let anxietyDegreeBefore = localStorage.getItem("anxietyDegree");
+    let anxietyDegreeAfter  = document.getElementById("anxiety-degree").value;
+    let text = `不安の内容「${anxiety}」が「${anxietyDegreeBefore}」から「${anxietyDegreeAfter}」に変わりました。`;
+
+    // オプションパラメータを設定
+    let hashtags = "ImHereNow";
+    let url = encodeURIComponent(document.domain)
+
+    // URLを生成して遷移
+    window.open("https://twitter.com/share?text=" + text + "&hashtags=" + hashtags + "&url=" + url);
+}

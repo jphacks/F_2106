@@ -21,5 +21,13 @@ body {
 }
 
 h1{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Rock Salt', cursive;
+}
+
+#twitter-share-button {
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 100vh;
+    color: white;
+    cursor: pointer;
 }

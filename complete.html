@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="・・・">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="favicon.ico">
         <title>
             I'm Here Now | Complete
         </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -52,7 +53,7 @@
         
         <div class="bg-rgba p-1">
         <div class="m-3 text-center">
-        <h1>最後に</h1>
+        <h1 class="m-5">最後に</h1>
         <p>このワークを通して不安がどのように変化したのかを確認してみましょう。</p>
         <p>変化に注目する事が心のコントロールを取り戻すために大切な観点なのです。</p>
         <p>改めてあなたの感じる不安を見つめて下さい。</p>
@@ -64,20 +65,22 @@
         <div class="form-group m-4">
           <label for="anxiety-degree">いまそれはどの程度の不安になりましたか(増えていても構いません、自分のあるがままを見つめてください)</label>
           <select id="anxiety-degree" class="form-control">
-            <option value="4">とても不安</option>
-            <option value="3">そこそこ不安</option>
-            <option value="2">少し不安</option>
-            <option value="1">不安を感じない</option>
+            <option value="とても不安">とても不安</option>
+            <option value="そこそこ不安">そこそこ不安</option>
+            <option value="少し不安">少し不安</option>
+            <option value="不安を感じない">不安を感じない</option>
           </select>
         </div>
 
         <p>このアプリがあなたの不安を軽減させる一助になる事を願っています。</p>
         <p>ありがとうございました。</p>
 
-        <!-- 多分html側で共有する時のデフォルトのテキストの設定など出来なさそうと思ったので、このカタチにしました。 
-        【参考】https://cly7796.net/blog/javascript/generate-share-button-in-javascript/-->
-        <p class="text-center">【SNSに共有】</p>
-        <div id="sns-area d-flex justify-content-center"></div>
+        <p class="text-center mt-5">【SNSに共有】</p>
+        <div class="tweet" id="tweet">
+          <button id="twitter-share-button" class="p-2"><i class="fab fa-twitter"></i>ツイートする</button>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      
 
         </div>
         </div>
@@ -86,5 +89,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="main.js"></script>
+        <script>
+          let anxiety = localStorage.getItem("anxiety");
+          let anxietyDegree = localStorage.getItem("anxietyDegree");
+          document.getElementById("anxiety").value = anxiety;
+          document.getElementById("anxiety-degree").value = anxietyDegree;
+        </script>
     </body>
 </html>
