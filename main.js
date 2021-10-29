@@ -86,12 +86,12 @@ function countdown() {
     } else if(deepBreathCount === 10) {
         document.getElementById("inhale").style.color = "whitesmoke";
         document.getElementById("inhale").style.fontWeight = "normal";
-        document.getElementById("stop").style.color = "crimson";
+        document.getElementById("stop").style.color = "skyblue";
         document.getElementById("stop").style.fontWeight = "bold";
     } else if (deepBreathCount === 5) {
         document.getElementById("stop").style.color = "whitesmoke";
         document.getElementById("stop").style.fontWeight = "normal";
-        document.getElementById("exhale").style.color = "crimson";
+        document.getElementById("exhale").style.color = "skyblue";
         document.getElementById("exhale").style.fontWeight = "bold";
     }
 }
@@ -100,7 +100,7 @@ function startCountdown() {
     document.getElementById("deep-breath").disabled = true;
 
     document.getElementById("timer").textContent = deepBreathCount;
-    document.getElementById("inhale").style.color = "crimson";
+    document.getElementById("inhale").style.color = "skyblue";
     document.getElementById("inhale").style.fontWeight = "bold";
     interval = setInterval(countdown, 1100);
 }
