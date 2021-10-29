@@ -5,7 +5,7 @@ body {
 }
 
 .bg-rgba {
-    background:rgba(0,0,0,0.4);
+    background:rgba(0,0,0,0.5);
 }
 
 .start {
@@ -21,5 +21,19 @@ body {
 }
 
 h1{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Rock Salt', cursive;
+}
+
+#timer {
+    font-size: 80px;
+    font-family: 'Rock Salt', cursive;
+    color: crimson;
+}
+
+#twitter-share-button {
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 100vh;
+    color: white;
+    cursor: pointer;
 }

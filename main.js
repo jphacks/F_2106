@@ -70,3 +70,56 @@ function next(prefix, length, to) {
         move(to);
     }
 }
+
+
+let deepBreathCount = 15;
+let interval;
+function countdown() {
+    deepBreathCount--;
+    document.getElementById("timer").textContent = deepBreathCount;
+    if(deepBreathCount <= 0) {
+        clearInterval(interval);
+        document.getElementById("deep-breath").disabled = false;
+        document.getElementById("exhale").style.color = "whitesmoke";
+        document.getElementById("exhale").style.fontWeight = "normal";
+        deepBreathCount = 15;
+    } else if(deepBreathCount === 10) {
+        document.getElementById("inhale").style.color = "whitesmoke";
+        document.getElementById("inhale").style.fontWeight = "normal";
+        document.getElementById("stop").style.color = "crimson";
+        document.getElementById("stop").style.fontWeight = "bold";
+    } else if (deepBreathCount === 5) {
+        document.getElementById("stop").style.color = "whitesmoke";
+        document.getElementById("stop").style.fontWeight = "normal";
+        document.getElementById("exhale").style.color = "crimson";
+        document.getElementById("exhale").style.fontWeight = "bold";
+    }
+}
+
+function startCountdown() {
+    document.getElementById("deep-breath").disabled = true;
+
+    document.getElementById("timer").textContent = deepBreathCount;
+    document.getElementById("inhale").style.color = "crimson";
+    document.getElementById("inhale").style.fontWeight = "bold";
+    interval = setInterval(countdown, 1100);
+}
+
+function complete() {
+    move("complete");
+}
+
+
+document.getElementById("twitter-share-button").onclick = function() {
+    let anxiety = localStorage.getItem("anxiety");
+    let anxietyDegreeBefore = localStorage.getItem("anxietyDegree");
+    let anxietyDegreeAfter  = document.getElementById("anxiety-degree").value;
+    let text = `不安の内容「${anxiety}」が「${anxietyDegreeBefore}」から「${anxietyDegreeAfter}」に変わりました。`;
+
+    // オプションパラメータを設定
+    let hashtags = "ImHereNow";
+    let url = encodeURIComponent(document.domain)
+
+    // URLを生成して遷移
+    window.open("https://twitter.com/share?text=" + text + "&hashtags=" + hashtags + "&url=" + url);
+}
