@@ -1,4 +1,5 @@
 function move(page) {
+    saveBgm();
     location.href = `${page}.html`;
 }
 
@@ -17,6 +18,9 @@ function saveInput(prefix, length) {
 
 function loadInput(prefix, length) {
     console.log("Load input");
+
+    setupBgm();
+
     let item = localStorage.getItem(`${prefix}Text`);
     if(!item) {
         console.log("Input doesn't exist");
@@ -122,4 +126,31 @@ document.getElementById("twitter-share-button").onclick = function() {
 
     // URLを生成して遷移
     window.open("https://twitter.com/share?text=" + text + "&hashtags=" + hashtags + "&url=" + url);
+}
+
+function setupBgm() {
+    let bgm = document.getElementById("bgm");
+
+    bgm.volume = 0.05;
+
+    let currentTime = localStorage.getItem("currentTime");
+    if(currentTime) {
+        bgm.currentTime = currentTime;
+    } else {
+        bgm.currentTime = 0;
+    }
+
+    let paused = Boolean(parseInt(localStorage.getItem("paused")));
+    // alert(paused);
+    if(!paused) {
+        bgm.play();
+    }
+}
+
+function saveBgm() {
+    let bgm = document.getElementById("bgm");
+    localStorage.setItem("currentTime", bgm.currentTime);
+    if(bgm.paused) localStorage.setItem("paused", 1);
+    else localStorage.setItem("paused", 0);
+    // bgm.pause();
 }
